@@ -1,0 +1,69 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Guy Koomer',
+  date: '2023-12-28',
+  title: 'Wix CMS for Your Website Development Needs',
+  description:
+    'Wix CMS to create infinite web pages and elevate your online presence effortlessly. Learn from real success stories and embrace the future of website development with Wix CMS',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+When Wix released the Studio version last year, I see articles out there about things Wix every single week. If you need any help, [please contact me](/).
+
+The choice of Content Management System (CMS) holds immense significance for your online presence. Wix CMS emerges as a contender, offering features tailored to modern businesses and individuals. This guide delves into Wix CMS capabilities, aiming to empower users for website performance.
+
+## The Evolution of Wix CMS: A Brief Overview
+
+Wix CMS has evolved significantly, refining its features to adapt to the digital landscape. Starting as a simple website builder, Wix has grown into a robust CMS solution catering to professionals and enterprises.
+
+## Key Features of Wix CMS: Empowering Your Online Presence
+
+### Intuitive Drag-and-Drop Editor
+Wix CMS features an intuitive drag-and-drop editor, enabling easy website customization without coding expertise. This user-friendly interface facilitates seamless design for users, regardless of their development experience.
+
+
+## Versatile App Marketplace
+The Wix App Marketplace offers a variety of apps for enhancing website functionality. From e-commerce to marketing tools, users can find solutions tailored to their specific needs, facilitating integration with third-party services.
+
+## Mobile Optimization
+Wix CMS prioritizes mobile optimization, ensuring responsive and accessible websites across platforms. Automatic mobile optimization features guarantee impeccable content display on smartphones and tablets, enhancing user experience.
+
+## Robust SEO Tools
+Wix CMS provides robust SEO tools to enhance website visibility and rankings on SERPs. From customizable meta tags to advanced analytics, users can optimize content for targeted keywords, driving organic traffic and maximizing online presence.
+
+
+## Mastering Structured Data Implementation with the Velo Framework API
+Structured data holds the key to boosting your CMS articles' visibility, and with the Velo framework API, you're equipped to harness its full potential.
+
+Picture this: You've got your hands on a snippet of code that's about to revolutionize the way search engines perceive your content. By importing the 'wix-seo-frontend' module, you're setting the stage for structured data magic to unfold. Just place it in the javascript File in Dev mode. 
+
+```javascript
+import wixSeoFrontend from 'wix-seo-frontend';
+
+$w.onReady(function () {
+    // Write your Javascript code here using the Velo framework API
+ $w("#dynamicDataset").onReady( () => {
+    let itemObj = $w("#dynamicDataset").getCurrentItem();
+    console.log("Data:" , itemObj)
+    let schema = itemObj.schemaMarkup
+    console.log("schema: ", schema )
+    wixSeoFrontend.setStructuredData([schema])
+  } );
+});
+
+```
+As you dive into your CMS, each article becomes an opportunity to infuse it with structured data brilliance. With a tweak here and there to the schema markup, tailored to your content's unique attributes, you're poised to captivate search engine crawlers and boost your visibility.
+
+With the Velo framework API by your side, implementing structured data isn't just a task—it's a journey towards SEO success. So, embrace structured data's power and watch your CMS articles soar to new heights in search engine rankings.
+
+## Conclusion: Embrace the Future of Website Development with Wix CMS
+
+Wix CMS emerges as a leading choice for individuals and businesses seeking a formidable online presence. With its intuitive interface, versatile features, and robust capabilities, Wix empowers users to create captivating websites and drive success. Embrace the future of website development with Wix CMS and unlock limitless possibilities for your digital endeavors.
+

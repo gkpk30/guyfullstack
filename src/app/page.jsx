@@ -280,15 +280,15 @@ function Schooling() {
       school: 'Pierce College',
       degree: 'Certificate of Achievement in Web Development, Programming & Scripting',
       logo: logoPierce,
-      start: '2014',
+      start: '2018',
       end: '2019',
     },
     {
       school: 'Pierce College',
       degree: 'AA Business Programing',
       logo: logoPierce,
-      start: '2011',
-      end: '2014',
+      start: '2016',
+      end: '2018',
     },
     {
       school: 'Cal State Northridge',
