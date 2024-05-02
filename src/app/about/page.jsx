@@ -65,8 +65,8 @@ export default function About() {
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
               As an experienced web developer and SEO professional, I am
-              dedicated to staying up-to-date withthe latest industry trends
-              andtechniques to ensure that I provide clients with the most
+              dedicated to staying up-to-date with the latest industry trends
+              and techniques to ensure that I provide clients with the most
               effective strategies for achieving their goals.
             </p>
             <p>
