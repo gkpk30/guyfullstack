@@ -1,0 +1,18 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Guy Koomer',
+  date: '2022-05-31',
+  title: 'Contextual Keyword Targeting',
+  description:
+    'Coming Soon',
+  articlePreview:'Check Back May 31st for More information on this hot topic'
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+

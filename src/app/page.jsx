@@ -108,7 +108,7 @@ function Article({ article }) {
       <Card.Eyebrow as="time" dateTime={article.date} decorate>
         {formatDate(article.date)}
       </Card.Eyebrow>
-      <Card.Description>{article.description}</Card.Description>
+      <Card.Description>{article.articlePreview}</Card.Description>
       <Card.Cta>Read article</Card.Cta>
     </Card>
   )
