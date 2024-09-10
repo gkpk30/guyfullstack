@@ -319,7 +319,7 @@ function Schooling() {
 
 function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
-  let videos = ['https://youtu.be/24Zwrtgo8H0', 'https://youtu.be/wUCkH423eTI', 'https://youtu.be/v3g_anh163k']
+  let videos = ['https://www.youtube.com/embed/v3g_anh163k?si=nhSLBJ2N118hwqrO', 'https://www.youtube.com/embed/24Zwrtgo8H0?si=sT8SNHmiPNEgtC4d', 'https://www.youtube.com/embed/AvrfAzuJU5M?si=f1XN6uOSpKQAxWkW']
 
   return (
     <div className="mt-16 sm:mt-20">
@@ -364,15 +364,17 @@ function Photos() {
           <div
             key={videoIndex}
             className={clsx(
-              'relative aspect-[4/3] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
+              'relative aspect-video w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
               rotations[videoIndex % rotations.length],
             )}
           >
-           <iframe
+          <iframe
         className="w-full h-full" 
         src={video}
+        title={`YouTube video player ${videoIndex}`} 
         frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
       ></iframe>
           </div>
