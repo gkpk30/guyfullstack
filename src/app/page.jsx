@@ -26,6 +26,9 @@ import image3 from '@/images/photos/headbetter.jpg'
 import image4 from '@/images/photos/hanotrading.jpg'
 // import image5 from '@/images/photos/image-5.jpg'
 import image5 from '@/images/photos/state-law-firm.png'
+import image6 from '@/images/photos/findmycrash.report.jpg'
+import image7 from '@/images/photos/wrapcitysite.jpg'
+import image8 from '@/images/photos/findmycrash-report.jpg'
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
@@ -316,6 +319,7 @@ function Schooling() {
 
 function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
+  let videos = ['https://youtu.be/24Zwrtgo8H0', 'https://youtu.be/wUCkH423eTI', 'https://youtu.be/v3g_anh163k']
 
   return (
     <div className="mt-16 sm:mt-20">
@@ -334,6 +338,43 @@ function Photos() {
               sizes="(min-width: 640px) 18rem, 11rem"
               className="absolute inset-0 h-full w-full object-cover"
             />
+          </div>
+        ))}
+      </div>
+      <div className="my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
+        {[image6, image7,].map((image, imageIndex) => (
+          <div
+            key={image.src}
+            className={clsx(
+              'relative aspect-[4/3] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
+              rotations[imageIndex % rotations.length],
+            )}
+          >
+            <Image
+              src={image}
+              alt=""
+              sizes="(min-width: 640px) 18rem, 11rem"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+        ))}
+      </div>
+      <div className="my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
+        {videos.map((video, videoIndex) => (
+          <div
+            key={videoIndex}
+            className={clsx(
+              'relative aspect-[4/3] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
+              rotations[videoIndex % rotations.length],
+            )}
+          >
+           <iframe
+        className="w-full h-full" 
+        src={video}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
           </div>
         ))}
       </div>
