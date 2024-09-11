@@ -29,6 +29,7 @@ import image5 from '@/images/photos/state-law-firm.png'
 import image6 from '@/images/photos/findmycrash.report.jpg'
 import image7 from '@/images/photos/wrapcitysite.jpg'
 import image8 from '@/images/photos/findmycrash-report.jpg'
+import image9 from '@/images/photos/square_thumbnail_wrapcity.jpg'
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
@@ -319,7 +320,7 @@ function Schooling() {
 
 function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
-  let videos = ['https://www.youtube.com/embed/v3g_anh163k?si=nhSLBJ2N118hwqrO', 'https://www.youtube.com/embed/24Zwrtgo8H0?si=sT8SNHmiPNEgtC4d', 'https://www.youtube.com/embed/AvrfAzuJU5M?si=f1XN6uOSpKQAxWkW']
+  let videos = ['https://www.youtube.com/embed/v3g_anh163k?si=nhSLBJ2N118hwqrO', 'https://www.youtube.com/embed/d9YOjrXfvO8?si=r3gP6L7McN7yma-8', 'https://www.youtube.com/embed/24Zwrtgo8H0?si=sT8SNHmiPNEgtC4d']
 
   return (
     <div className="mt-16 sm:mt-20">
@@ -342,7 +343,7 @@ function Photos() {
         ))}
       </div>
       <div className="my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image6, image7,].map((image, imageIndex) => (
+        {[image6, image9,].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
@@ -364,7 +365,7 @@ function Photos() {
           <div
             key={videoIndex}
             className={clsx(
-              'relative aspect-video w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
+              'relative aspect-video w-60 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-96 sm:rounded-2xl dark:bg-zinc-800',
               rotations[videoIndex % rotations.length],
             )}
           >
