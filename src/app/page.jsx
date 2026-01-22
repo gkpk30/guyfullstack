@@ -17,6 +17,7 @@ import logoPlanetaria from '@/images/logos/planetaria.svg'
 import logoSalientDynamics from '@/images/logos/sd-logo.png'
 import logoStarbucks from '@/images/logos/starbucks.svg'
 import logoFreelance from '@/images/logos/freelance_logo.svg'
+import logoVeruvo from '@/images/logos/veruvo_logo.png'
 import logoCsun from '@/images/logos/csun.png'
 import logoCcrc from '@/images/logos/ccrc.webp'
 import logoPierce from '@/images/logos/pierce_logo_black.png'
@@ -30,6 +31,7 @@ import image6 from '@/images/photos/findmycrash.report.jpg'
 import image7 from '@/images/photos/wrapcitysite.jpg'
 import image8 from '@/images/photos/findmycrash-report.jpg'
 import image9 from '@/images/photos/square_thumbnail_wrapcity.jpg'
+import image10 from '@/images/photos/millers-76-smog-landing-page.jpg'
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
@@ -196,9 +198,9 @@ function Role({ role }) {
 function Resume() {
   let resume = [
     {
-      company: 'Salient Dynamics',
-      title: 'Owner',
-      logo: logoSalientDynamics,
+      company: 'Veruvo',
+      title: 'PPC Client Success Manager',
+      logo: logoVeruvo,
       start: '2020',
       end: {
         label: 'Present',
@@ -206,11 +208,18 @@ function Resume() {
       },
     },
     {
-      company: 'Independant Contractor',
+      company: 'Salient Dynamics',
       title: 'Web Developer',
+      logo: logoSalientDynamics,
+      start: '2017',
+      end: '2020',
+    },
+    {
+      company: 'Independant Contractor',
+      title: 'Web Devloper ',
       logo: logoFreelance,
       start: '2015',
-      end: '2020',
+      end: '2017',
     },
     {
       company: 'CCRC',
@@ -325,25 +334,7 @@ function Photos() {
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image4,image5].map((image, imageIndex) => (
-          <div
-            key={image.src}
-            className={clsx(
-              'relative aspect-square w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
-              rotations[imageIndex % rotations.length],
-            )}
-          >
-            <Image
-              src={image}
-              alt=""
-              sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>
-        ))}
-      </div>
-      <div className="my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image6, image9,].map((image, imageIndex) => (
+        {[image1, image10, image3, image4,image5].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
@@ -355,7 +346,25 @@ function Photos() {
               src={image}
               alt=""
               sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 h-full w-full object-cover"
+              className="absolute inset-0 h-full w-full object-fill"
+            />
+          </div>
+        ))}
+      </div>
+      <div className="my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
+        {[image6, image2, image9,].map((image, imageIndex) => (
+          <div
+            key={image.src}
+            className={clsx(
+              'relative aspect-[4/3] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
+              rotations[imageIndex % rotations.length],
+            )}
+          >
+            <Image
+              src={image}
+              alt=""
+              sizes="(min-width: 640px) 18rem, 11rem"
+              className="absolute inset-0 h-full w-full object-fill"
             />
           </div>
         ))}
@@ -393,7 +402,7 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Full Stack Developer, seo specialist, and designer.
+            Full Stack Developer and SEM specialist.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I’m Guy, a full stack developer and entrepreneur based in Los Angeles. I’m the owner of Salient Dynamics, where we develop
