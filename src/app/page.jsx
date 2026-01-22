@@ -32,6 +32,7 @@ import image7 from '@/images/photos/wrapcitysite.jpg'
 import image8 from '@/images/photos/findmycrash-report.jpg'
 import image9 from '@/images/photos/square_thumbnail_wrapcity.jpg'
 import image10 from '@/images/photos/millers-76-smog-landing-page.jpg'
+import image11 from '@/images/photos/reed-landing-page.jpg'
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
@@ -199,7 +200,7 @@ function Resume() {
   let resume = [
     {
       company: 'Veruvo',
-      title: 'PPC Client Success Manager',
+      title: 'PPC Success Manager',
       logo: logoVeruvo,
       start: '2020',
       end: {
@@ -334,7 +335,7 @@ function Photos() {
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image10, image3, image4,image5].map((image, imageIndex) => (
+        {[image3, image10, image1, image4,image5].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
@@ -346,13 +347,14 @@ function Photos() {
               src={image}
               alt=""
               sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 h-full w-full object-fill"
+              className="absolute inset-0 h-full w-full object-cover"
+               placeholder='blur'
             />
           </div>
         ))}
       </div>
       <div className="my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image6, image2, image9,].map((image, imageIndex) => (
+        {[image6, image11, image2, image9].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
@@ -364,7 +366,8 @@ function Photos() {
               src={image}
               alt=""
               sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 h-full w-full object-fill"
+              className="absolute inset-0 h-full w-full object-cover"
+              placeholder='blur'
             />
           </div>
         ))}
@@ -402,10 +405,10 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Full Stack Developer and SEM specialist.
+            Full Stack Developer and SEM Specialist.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Guy, a full stack developer and entrepreneur based in Los Angeles. I’m the owner of Salient Dynamics, where we develop
+            I’m Guy, a full stack developer and entrepreneur based in Los Angeles. I develop
             strategies that empower small businesses to explore on-line growth on their
             own terms.
           </p>
@@ -432,15 +435,15 @@ export default async function Home() {
       <Photos />
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
+          <div className="flex flex-col gap-16 order-2 md:order-none">
             {articles.map((article) => (
               <Article key={article.slug} article={article} />
             ))}
           </div>
-          <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
+          <div className="space-y-10 lg:pl-16 xl:pl-24 order-1 md:order-none">
             <Resume />
             <Schooling/>
+            <Newsletter />
           </div>
         </div>
       </Container>
