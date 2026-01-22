@@ -40,7 +40,7 @@ function MailIcon(props) {
 export const metadata = {
   title: 'About',
   description:
-    'I’m Spencer Sharp. I live in New York City, where I design the future.',
+    'I’m Guy Koomer. I live in Los Angeles, where I help businesses from the small all the way up.',
 }
 
 export default function About() {
@@ -64,7 +64,7 @@ export default function About() {
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              As an experienced web developer and SEO professional, I am
+              As an experienced web developer and SEM professional, I am
               dedicated to staying up-to-date with the latest industry trends
               and techniques to ensure that I provide clients with the most
               effective strategies for achieving their goals.
@@ -75,7 +75,7 @@ export default function About() {
               and helps you reach your full potential.
             </p>
             <p>
-              Thank you for considering me for your web development and SEO
+              Thank you for considering me for your web development and SEM
               needs. I look forward to hearing from you at your earliest convenience.
             </p>
           </div>
