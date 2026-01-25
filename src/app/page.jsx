@@ -33,6 +33,7 @@ import image8 from '@/images/photos/findmycrash-report.jpg'
 import image9 from '@/images/photos/square_thumbnail_wrapcity.jpg'
 import image10 from '@/images/photos/millers-76-smog-landing-page.jpg'
 import image11 from '@/images/photos/reed-landing-page.jpg'
+import image12 from '@/images/photos/balfour.jpg'
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
@@ -354,7 +355,7 @@ function Photos() {
         ))}
       </div>
       <div className="my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image6, image11, image2, image9].map((image, imageIndex) => (
+        {[image6, image11, image2, image12].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
@@ -408,9 +409,7 @@ export default async function Home() {
             Full Stack Developer and SEM Specialist.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Guy, a full stack developer in Los Angeles. I develop
-            strategies that empower local small businesses to explore on-line growth on their
-            own terms.
+            I’m Guy, a full stack developer in Los Angeles. I help local businesses attract local leads and turn them into real phone calls and booked work.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink href="#" aria-label="Follow on X" icon={XIcon} />
